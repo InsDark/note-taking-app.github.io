@@ -1,0 +1,88 @@
+$color1: rgb(255, 123, 0);
+$color2: white;
+$color3: black;
+$font-content: 'Open Sans', sans-serif;
+$font-title: 'Oswald', sans-serif;
+
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+    background-color: $color1;
+}
+
+.noteTakingApp{
+    background-color: $color2;
+    margin: 3rem;
+    padding: 1rem 2rem;
+    color: $color3;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    h1{
+        font-family: $font-title;
+        margin: 0;
+        text-align: center;
+    }
+    h2{
+        font-family: $font-content;
+        color: $color1;
+    }
+    .inputs{
+        display: grid;
+        input{
+            display: block;
+            width: 100%;
+            margin: 1rem 0;
+            padding: .5rem;
+            text-overflow: none;
+        }
+        .contentNote{
+            padding: .5rem .5rem 4rem .5rem;
+        }
+    }
+    .buttons{
+        display: flex;
+        justify-content: space-between;
+        i{
+            margin: 0 .3rem 0 0;
+        }
+        button{
+            color: $color2;
+            border: none;
+            background-color: $color1;
+            padding: .7rem;
+            margin-bottom: 1.5rem;
+            &:hover {
+                cursor: pointer;
+                color: $color1;
+                background-color: $color2;
+                border: 1px solid $color1;
+            }
+        }
+    }
+    .yourNotes{
+        background-color: $color1;
+        padding: 2rem;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+        gap: 1rem;
+        .note{
+            padding: 1rem;
+            background-color: $color2;
+            height: auto;
+            width: 100%;
+            h3{
+                margin: 0;
+                margin-bottom: 1rem;
+                font-family: $font-title;
+            }
+            p{
+                margin:0;
+                font-family: $font-content;
+            }
+        }
+    }
+}
